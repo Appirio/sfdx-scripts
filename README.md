@@ -22,7 +22,7 @@ $ npm install -g sfdx-scripts
 $ sfdx-scripts COMMAND
 running command...
 $ sfdx-scripts (-v|--version|version)
-sfdx-scripts/0.0.0 darwin-x64 node-v10.0.0
+sfdx-scripts/0.0.0 darwin-x64 node-v8.9.4
 $ sfdx-scripts --help [COMMAND]
 USAGE
   $ sfdx-scripts COMMAND
