@@ -10,7 +10,7 @@ I found myself keeping `npm` in my sfdx projects just so that I could use the `n
 Install `sfdx-scripts` the same way you would any other sfdx plugin. The plugin will provide a single command, `run`.
 
 ```sh-session
-$ sfdx plugins:install sfdx-scripts
+$ sfdx plugins:install @appirio/sfdx-scripts
 ...
 $ sfdx run --help
 Run named lifecycle scripts for your project.
