@@ -60,6 +60,15 @@
         "js-tokens": "^4.0.0"
       },
       "dependencies": {
+        "chalk": {
+          "version": "2.4.1",
+          "dev": true,
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
+        },
         "js-tokens": {
           "version": "4.0.0",
           "dev": true
@@ -226,6 +235,16 @@
         "@oclif/linewrap": "^1.0.0",
         "chalk": "^2.4.1",
         "tslib": "^1.9.3"
+      },
+      "dependencies": {
+        "chalk": {
+          "version": "2.4.1",
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
+        }
       }
     },
     "@oclif/plugin-help": {
@@ -243,6 +262,14 @@
       "dependencies": {
         "ansi-regex": {
           "version": "4.0.0"
+        },
+        "chalk": {
+          "version": "2.4.1",
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
         },
         "strip-ansi": {
           "version": "5.0.0",
@@ -274,6 +301,16 @@
         "@salesforce/ts-types": "0.19.3",
         "chalk": "^2.4.0",
         "cli-ux": "^4.8.0"
+      },
+      "dependencies": {
+        "chalk": {
+          "version": "2.4.1",
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
+        }
       }
     },
     "@salesforce/core": {
@@ -687,7 +724,7 @@
       }
     },
     "chalk": {
-      "version": "2.4.1",
+      "version": "2.4.2",
       "requires": {
         "ansi-styles": "^3.2.1",
         "escape-string-regexp": "^1.0.5",
@@ -743,6 +780,14 @@
       "dependencies": {
         "ansi-regex": {
           "version": "4.0.0"
+        },
+        "chalk": {
+          "version": "2.4.1",
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
         },
         "clean-stack": {
           "version": "2.0.0"
@@ -2158,6 +2203,7 @@
           "resolved": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz",
           "integrity": "sha1-DNkKVhCT810KmSVsIrcGlDP60Rc=",
           "dev": true,
+          "optional": true,
           "requires": {
             "kind-of": "^3.0.2",
             "longest": "^1.0.1",
@@ -2527,7 +2573,8 @@
           "version": "1.1.6",
           "resolved": "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz",
           "integrity": "sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==",
-          "dev": true
+          "dev": true,
+          "optional": true
         },
         "is-builtin-module": {
           "version": "1.0.0",
@@ -2623,6 +2670,7 @@
           "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz",
           "integrity": "sha1-MeohpzS6ubuw8yRm2JOupR5KPGQ=",
           "dev": true,
+          "optional": true,
           "requires": {
             "is-buffer": "^1.1.5"
           }
@@ -2675,7 +2723,8 @@
           "version": "1.0.1",
           "resolved": "https://registry.npmjs.org/longest/-/longest-1.0.1.tgz",
           "integrity": "sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=",
-          "dev": true
+          "dev": true,
+          "optional": true
         },
         "lru-cache": {
           "version": "4.1.3",
@@ -2978,7 +3027,8 @@
           "version": "1.6.1",
           "resolved": "https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz",
           "integrity": "sha1-jcrkcOHIirwtYA//Sndihtp15jc=",
-          "dev": true
+          "dev": true,
+          "optional": true
         },
         "require-directory": {
           "version": "2.1.1",
@@ -3674,6 +3724,15 @@
         "write-json-file": "^2.3.0"
       },
       "dependencies": {
+        "chalk": {
+          "version": "2.4.1",
+          "dev": true,
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
+        },
         "fs-extra": {
           "version": "6.0.1",
           "dev": true,
@@ -4282,6 +4341,17 @@
         "semver": "^5.3.0",
         "tslib": "^1.8.0",
         "tsutils": "^2.27.2"
+      },
+      "dependencies": {
+        "chalk": {
+          "version": "2.4.1",
+          "dev": true,
+          "requires": {
+            "ansi-styles": "^3.2.1",
+            "escape-string-regexp": "^1.0.5",
+            "supports-color": "^5.3.0"
+          }
+        }
       }
     },
     "tslint-microsoft-contrib": {

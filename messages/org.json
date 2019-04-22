@@ -1,6 +1,9 @@
 {
-  "commandDescription": "print a greeting and your org IDs",
-  "nameFlagDescription": "name to print",
-  "forceFlagDescription": "example boolean flag",
-  "errorNoOrgResults": "No results found for the org '%s'."
+  "runCommandDescription": "Run named lifecycle scripts for your project.",
+  "verboseFlagDescription": "show all command output",
+  "scriptNotFound": "script not found",
+  "scriptNotDeclared": "no script declared",
+  "unsupportedStep": "unsupported step",
+  "done": "✔︎",
+  "failed": "✘"
 }
