@@ -54,7 +54,7 @@ export default class Run extends SfdxCommand {
     }
 
     return {
-      'log': log.split('\n').filter(s => s.length > 0)
+      log: log.split('\n').filter(s => s.length > 0)
     };
   }
 

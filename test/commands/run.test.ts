@@ -33,7 +33,7 @@ describe('run', () => {
     .stderr()
     .command(['run', 'myScript'])
     .it('can run a single-line script', ctx => {
-      expect(ctx.stderr).to.contain('version... done');
+      expect(ctx.stderr).to.contain('version... ✔︎');
     });
 
   test
@@ -50,8 +50,8 @@ describe('run', () => {
     .stderr()
     .command(['run', 'myScript'])
     .it('can run a multi-step', ctx => {
-      expect(ctx.stderr).to.contain('version... done');
-      expect(ctx.stderr).to.contain('plugins... done');
+      expect(ctx.stderr).to.contain('version... ✔︎');
+      expect(ctx.stderr).to.contain('plugins... ✔︎');
     });
 
   test
@@ -69,7 +69,7 @@ describe('run', () => {
     .timeout(10000)
     .command(['run', 'myScript', '--verbose'])
     .it('prints stdout with the --verbose flag is used', ctx => {
-      expect(ctx.stderr).to.contain('version... done');
+      expect(ctx.stderr).to.contain('version... ✔︎');
       expect(ctx.stdout).to.contain('sfdx-cli/');
     });
 
@@ -88,7 +88,7 @@ describe('run', () => {
     .command(['run', 'myScript'])
     .it('supports section headings', ctx => {
       expect(ctx.stderr).to.contain('Show Plugins');
-      expect(ctx.stderr).to.contain('plugins... done');
+      expect(ctx.stderr).to.contain('plugins... ✔︎');
     });
 
   test
@@ -109,9 +109,9 @@ describe('run', () => {
     .stderr()
     .command(['run', 'myScript'])
     .it('supports nested script calls', ctx => {
-      expect(ctx.stderr).to.contain('plugins... done');
-      expect(ctx.stderr).to.contain('version... done');
-      expect(ctx.stderr).to.contain('help... done');
+      expect(ctx.stderr).to.contain('plugins... ✔︎');
+      expect(ctx.stderr).to.contain('version... ✔︎');
+      expect(ctx.stderr).to.contain('help... ✔︎');
     });
 
   test
@@ -132,8 +132,8 @@ describe('run', () => {
     .stderr()
     .command(['run', 'myScript'])
     .it('supports "." as an alias for "run"', ctx => {
-      expect(ctx.stderr).to.contain('plugins... done');
-      expect(ctx.stderr).to.contain('version... done');
-      expect(ctx.stderr).to.contain('help... done');
+      expect(ctx.stderr).to.contain('plugins... ✔︎');
+      expect(ctx.stderr).to.contain('version... ✔︎');
+      expect(ctx.stderr).to.contain('help... ✔︎');
     });
 });
