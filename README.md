@@ -1,5 +1,4 @@
 # sfdx-scripts
-
 Define named scripts to run at various times in the lifecycle of your project.
 
 
@@ -7,26 +6,25 @@ Define named scripts to run at various times in the lifecycle of your project.
 I found myself keeping `npm` in my sfdx projects just so that I could use the `npm run` command to manage lifecycle scripts. That seemed rather silly, so I created this (very) simple sfdx plugin to replace `npm run`.
 
 ## Installation & Usage
-Install `sfdx-scripts` the same way you would any other sfdx plugin. The plugin will provide a single command, `run`.
+Install `sfdx-scripts` the same way you would any other sfdx plugin. The plugin provides two commands: `run` and `run:list`.
 
 ```sh-session
 $ sfdx plugins:install @appirio/sfdx-scripts
-...
-$ sfdx run --help
-Run named lifecycle scripts for your project.
-
-USAGE
-  $ sfdx run [SCRIPT]
-
-OPTIONS
-  --json                                          format output as json
-  --loglevel=(trace|debug|info|warn|error|fatal)  logging level for this command invocation
-  --verbose                                       emit additional command output to stdout
-
-EXAMPLE
-  $ sfdx run standup
 ```
 
+## Listing Defined Scripts
+To list what scripts are defined in the project use `run:list`.
+
+```sh-session
+$ sfdx run:list
+=== Scripts
+start
+install
+stop
+publish
+```
+
+## Executing a Script
 Use the `run` command to execute a script.
 
 ```sh-session
@@ -51,7 +49,7 @@ Scripts are defined in the `plugins` section of `sfdx-project.json`. Each comman
         "force:org:create -f config/project-scratch-def.json -s -a myProject",
         "force:source:push"
       ],
-      "teardown" : "force:org:delete --nopromt -a myProject"
+      "teardown" : "force:org:delete --noprompt -a myProject"
     }
   }
   ...
@@ -59,7 +57,7 @@ Scripts are defined in the `plugins` section of `sfdx-project.json`. Each comman
 ```
 
 ## Headings
-For friendlier output while a script is running, you can define heading steps in your script. Any script step that starts with a hash (`#`) is a heading step. Everything after the hash will be written to the console as bold text. E.g.
+For friendlier output while a script is running, you can define heading steps in your script. Any script step that starts with a hash (`#`) is a heading step. Everything after the hash will be written to the console as heading.
 
 ```json
 {
@@ -79,9 +77,9 @@ For friendlier output while a script is running, you can define heading steps in
 
 ```sh-session
 $ sfdx run standup
-Create Org
-force:org:create -f config/project-scratch-def.json -s -a myProject... done
-force:source:push... done
+=== Create Org
+force:org:create -f config/project-scratch-def.json -s -a myProject... ✔︎
+force:source:push... ✔︎
 ```
 
 ## Subscripts

@@ -1,9 +1,12 @@
 {
   "runCommandDescription": "Run named lifecycle scripts for your project.",
+  "runListCommandDescription": "List all lifecycle scripts for your project.",
   "verboseFlagDescription": "show all command output",
   "scriptNotFound": "script not found",
   "scriptNotDeclared": "no script declared",
   "unsupportedStep": "unsupported step",
+  "scriptListHeading": "Scripts",
+  "noScriptsDefined": "No scripts are defined.",
   "done": "✔︎",
   "failed": "✘"
 }

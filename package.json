@@ -1,7 +1,7 @@
 {
   "name": "@appirio/sfdx-scripts",
   "description": "Define named scripts to run at various times in the lifecycle of your sfdx project.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Roarke Lynch",
   "bugs": {
     "url": "https://github.com/Appirio/sfdx-scripts/issues"
