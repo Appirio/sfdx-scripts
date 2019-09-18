@@ -1,7 +1,7 @@
 {
   "name": "@appirio/sfdx-scripts",
   "description": "Define named scripts to run at various times in the lifecycle of your sfdx project.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Roarke Lynch",
   "bugs": {
     "url": "https://github.com/Appirio/sfdx-scripts/issues"
@@ -13,6 +13,7 @@
     "@salesforce/command": "^2.0.0",
     "@salesforce/core": "^2.0.0",
     "chalk": "2.4.2",
+    "string-argv": "^0.3.1",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
