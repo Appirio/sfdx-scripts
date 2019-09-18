@@ -1,6 +1,7 @@
 import { core, flags, SfdxCommand } from '@salesforce/command';
 import { AnyJson } from '@salesforce/ts-types';
-import { exec } from 'child_process';
+import { spawn } from 'child_process';
+import stringArgv from 'string-argv';
 import {
   parseSfdxScriptLibrary,
   ScriptSection,
@@ -126,13 +127,37 @@ export default class Run extends SfdxCommand {
   }
 
   private async executeCommand(cmd: string): Promise<string> {
+    const argv = stringArgv(cmd);
+    const command = argv[0];
+    const args = argv.splice(1);
+
     return new Promise((resolve, reject) => {
-      exec(cmd, (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
+      const s = spawn(command, args);
+      let output = '';
+      let error = '';
+
+      // Capture all stdout
+      s.stdout.on('data', data => {
+        output += data;
+      });
+
+      // Capture all stderr
+      s.stderr.on('data', data => {
+        error += data;
+      });
+
+      // Resolve or reject based on the exit code of the spawed process
+      s.on('close', code => {
+        if (code) {
+          reject(error);
         } else {
-          resolve(stdout);
+          resolve(output);
         }
+      });
+
+      // Reject if the process could not be spawned
+      s.on('error', err => {
+        reject(err);
       });
     });
   }
