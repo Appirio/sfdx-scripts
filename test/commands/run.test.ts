@@ -1,7 +1,6 @@
 import { expect, test } from '@salesforce/command/lib/test';
 
 describe('run', () => {
-
   test
     .withProject({})
     .stdout()
@@ -112,6 +111,25 @@ describe('run', () => {
       expect(ctx.stderr).to.contain('plugins... ✔︎');
       expect(ctx.stderr).to.contain('version... ✔︎');
       expect(ctx.stderr).to.contain('help... ✔︎');
+    });
+
+  test
+    .env({
+      'myParam': 'defaultusername'
+    })
+    .withProject({
+      'plugins': {
+        'scripts': {
+          'myScript': [
+            'force:config:set $myParam=foo@bar.com'
+          ]
+        }
+      }
+    })
+    .stderr()
+    .command(['run', 'myScript'])
+    .it('replaces environment variables in scripts', ctx => {
+      expect(ctx.stderr).to.contain('force:config:set $myParam=foo@bar.com... ✔︎');
     });
 
   test
