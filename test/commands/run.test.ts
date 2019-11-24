@@ -115,13 +115,13 @@ describe('run', () => {
 
   test
     .env({
-      'doThis': 'plugins'
+      'myParam': 'defaultusername'
     })
     .withProject({
       'plugins': {
         'scripts': {
           'myScript': [
-            '$doThis'
+            'force:config:set $myParam=foo@bar.com'
           ]
         }
       }
@@ -129,7 +129,7 @@ describe('run', () => {
     .stderr()
     .command(['run', 'myScript'])
     .it('replaces environment variables in scripts', ctx => {
-      expect(ctx.stderr).to.contain('plugins... ✔︎');
+      expect(ctx.stderr).to.contain('force:config:set $myParam=foo@bar.com... ✔︎');
     });
 
   test
