@@ -105,3 +105,22 @@ Remember, `run` is a command just like any other for `sfdx`. You can use it call
   ...
 }
 ```
+
+## Environment Variables
+Script commands can include environment variables in either dollar or dollar-brace syntax. They will be automatically replaced when run. This is useful when you need to include secrets in your setup and do not want to commit them to version control.
+
+```json
+{
+  ...
+  "plugins" : {
+    "scripts" : {
+      "standup" : [
+        "force:org:create -f config/project-scratch-def.json -s -a myProject",
+        "force:package:install -p MyPackage -k $installKeyStoredAsEnvVar",
+        "force:package:install -p OtherPackage -k ${ dollarBraceFormat }"
+      ]
+    }
+  }
+  ...
+}
+```
