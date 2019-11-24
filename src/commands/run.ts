@@ -10,6 +10,9 @@ import {
   SfdxScript,
   StepKind
 } from '../sfdxScripts';
+import {
+  envsub
+} from '../util';
 
 // tslint:disable-next-line ordered-imports
 import chalk from 'chalk';
@@ -129,7 +132,7 @@ export default class Run extends SfdxCommand {
   private async executeCommand(cmd: string): Promise<string> {
     const argv = stringArgv(cmd);
     const command = argv[0];
-    const args = argv.splice(1);
+    const args = argv.splice(1).map(envsub);
 
     return new Promise((resolve, reject) => {
       const s = spawn(command, args);
