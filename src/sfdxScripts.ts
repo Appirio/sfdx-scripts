@@ -1,3 +1,7 @@
+import {
+  envsub
+} from './util';
+
 // A script
 export interface SfdxScript {
   name: string;
@@ -75,6 +79,6 @@ const parseScriptStep = (str: string): ScriptSection | ScriptSubScript | ScriptS
   // Otherwise, this is an Sfdx command
   return {
     kind: StepKind.SfdxCommand,
-    command: body
+    command: envsub(body)
   } as ScriptSfdxCommand;
 };
