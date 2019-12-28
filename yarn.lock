@@ -230,7 +230,7 @@
     chalk "^2.4.2"
     cli-ux "^4.9.3"
 
-"@salesforce/core@^2.1.0", "@salesforce/core@^2.1.2":
+"@salesforce/core@^2.1.0":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.1.2.tgz#9d31a13fbf1b4df2183868673dd14c04740f8bb9"
   integrity sha512-TbSDuU+5Mo87kd2v+Ay7MKfVp3puJM5LiMMx6E4Fc36LpHDTTp4wMxpQHNtM8IeHlxQtZ1MyK3h1BMJ78wFIkg==
@@ -243,6 +243,23 @@
     debug "^3.1.0"
     jsen "0.6.6"
     jsforce "1.8.5"
+    jsonwebtoken "8.5.0"
+    mkdirp "0.5.1"
+    sfdx-faye "^1.0.9"
+
+"@salesforce/core@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.1.5.tgz#5203136d7387245fee74a5866ef73fe66cc70cfc"
+  integrity sha512-ota45ZvWB8P07L8pizqcaj+fG1v8euflJX6sBhVq3GvyuITbSW35+hyPKUY44oRephF0+qnIUEYzMw5aiIU/FQ==
+  dependencies:
+    "@salesforce/kit" "^1.0.0"
+    "@salesforce/ts-sinon" "^1.0.0"
+    "@salesforce/ts-types" "^1.0.0"
+    "@types/jsforce" "1.9.2"
+    bunyan-sfdx-no-dtrace "1.8.2"
+    debug "^3.1.0"
+    jsen "0.6.6"
+    jsforce "1.9.3"
     jsonwebtoken "8.5.0"
     mkdirp "0.5.1"
     sfdx-faye "^1.0.9"
@@ -531,6 +548,11 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+base64-url@^2.2.0:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/base64-url/-/base64-url-2.3.2.tgz#d7ea32e80ce3c3ad49f823e77c4dd247c6b81759"
+  integrity sha512-2QpXjtjndKqPn9JKBpMTCbDGpgicfLUu+N5Y1vEfbuyqb1MN1D68C9YKCth4SjTHRvJleF3tPuxhLbH79MM0iQ==
 
 base@^0.11.1:
   version "0.11.2"
@@ -829,10 +851,15 @@ commander@2.15.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
   integrity sha512-VlfT9F3V0v+jr4yxPc5gg9s62/fIVWsd2Bk2iD435um1NlGMYdVCq+MjcXnhYq2icNOizHr1kK+5TI6H0Hy0ag==
 
-commander@^2.12.1, commander@^2.9.0, commander@~2.20.0:
+commander@^2.12.1, commander@^2.9.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
+
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -912,6 +939,11 @@ csv-parse@^1.1.1:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.3.3.tgz#d1cfd8743c2f849a0abb2fd544db56695d19a490"
   integrity sha1-0c/YdDwvhJoKuy/VRNtWaV0ZpJA=
+
+csv-parse@^4.6.3:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.8.3.tgz#9f9b66c3e7e30409dba3d08ecd89eaa04b320659"
+  integrity sha512-0GPxubzYzSn08lhNTWDCkcDKn8krmw0WuscqB2RrW6sugGGskbwaaEz7PCFFwbQ0phNGTTieiyfzzu3S/jZZ7Q==
 
 csv-stringify@^1.0.4:
   version "1.1.2"
@@ -1537,9 +1569,9 @@ growl@1.10.5:
   integrity sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==
 
 handlebars@^4.1.2:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.2.0.tgz#57ce8d2175b9bbb3d8b3cf3e4217b1aec8ddcb2e"
-  integrity sha512-Kb4xn5Qh1cxAKvQnzNWZ512DhABzyFNmsaJf3OAkWNa4NkaqWcNI8Tao8Tasi0/F4JD9oyG0YxuFyvyR57d+Gw==
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
+  integrity sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -2001,6 +2033,27 @@ jsforce@1.8.5:
     request "^2.72.0"
     xml2js "^0.4.16"
 
+jsforce@1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/jsforce/-/jsforce-1.9.3.tgz#caea681c0fd8dcea79459b81c2019f4425eacd12"
+  integrity sha512-NJiBoTfsSElVZnh1MO7zv8anDPdy6vBVG19SEJ5pQtE+QJKFksjy4tpXbyzVyBft5Lo6Npr1HIPUP+RkVd9weQ==
+  dependencies:
+    base64-url "^2.2.0"
+    co-prompt "^1.0.0"
+    coffeescript "^1.10.0"
+    commander "^2.9.0"
+    csv-parse "^4.6.3"
+    csv-stringify "^1.0.4"
+    faye "^1.2.0"
+    inherits "^2.0.1"
+    lodash "^4.17.14"
+    multistream "^2.0.5"
+    opn "^5.3.0"
+    promise "^7.1.1"
+    readable-stream "^2.1.0"
+    request "^2.72.0"
+    xml2js "^0.4.16"
+
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -2210,7 +2263,7 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@^4.11.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15:
+lodash@^4.11.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -3566,11 +3619,11 @@ typescript@~3.1.6:
   integrity sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
 
 uglify-js@^3.1.4:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.6.0.tgz#704681345c53a8b2079fb6cec294b05ead242ff5"
-  integrity sha512-W+jrUHJr3DXKhrsS7NUVxn3zqMOFn0hL/Ei6v0anCIMoKC93TjcflTagwIHLW7SfMFfiQuktQyFVCFHGUE0+yg==
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.7.3.tgz#f918fce9182f466d5140f24bb0ff35c2d32dcc6a"
+  integrity sha512-7tINm46/3puUA4hCkKYo4Xdts+JDaVC9ZPRcG8Xw9R4nhO/gZgUM3TENq8IF4Vatk8qCig4MzP/c8G4u2BkVQg==
   dependencies:
-    commander "~2.20.0"
+    commander "~2.20.3"
     source-map "~0.6.1"
 
 union-value@^1.0.0:
